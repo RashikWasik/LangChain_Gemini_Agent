@@ -18,7 +18,6 @@ prompt = ChatPromptTemplate.from_messages([
 # Combine the prompt and the model into a simple chain
 chain = prompt | model
 
-
 # Get user input
 question = input("\nAsk anything: ")
 
@@ -27,10 +26,10 @@ if not question.strip():
     print("\nInput cannot be empty. Exiting.")
     sys.exit(0)
 
-
 # Running the model 
 response = chain.invoke({"question": question})
 
 # Show the model's answer
 print("\nModel Response:")
 print(response.content + "\n")
+
